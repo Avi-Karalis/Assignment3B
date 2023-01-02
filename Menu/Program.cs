@@ -69,6 +69,9 @@ namespace Menu {
 
         }
         public static void InitialiseDatabase() {
+            if (appDBContext.CertificateTitles.Count() > 0) {
+                return;
+            }
             CertificateTitle CsFoundation = new CertificateTitle("C# Foundation");
             CertificateTitle CsAdvanced = new CertificateTitle("C# Advanced");
             CertificateTitle CssFoundation = new CertificateTitle("CSS Foundation");

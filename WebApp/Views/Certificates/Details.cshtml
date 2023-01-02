@@ -1,0 +1,98 @@
+﻿@model WebApp.Data.Certificate
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+    <div>
+        <h4>Certificate</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Candidate.FirstName)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Candidate.FirstName)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.CertificateTitle.Title)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.CertificateTitle.Title)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.AssessmentTestCode)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.AssessmentTestCode)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.ExaminationDate)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.ExaminationDate)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.ScoreReportDate)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.ScoreReportDate)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.CandidateScore)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.CandidateScore)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.MaximumScore)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.MaximumScore)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.AssessmentResultLabel)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.AssessmentResultLabel)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.PercentageScore)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.PercentageScore)
+            </dd>
+    
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.CertificateId }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+</body>
+</html>
