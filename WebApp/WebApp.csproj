@@ -253,7 +253,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="CertificatesController.cs" />
+    <Compile Include="Controllers\CertificatesController.cs" />
     <Compile Include="Controllers\CandidatesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\InitializeDBController.cs" />
@@ -315,11 +315,11 @@
     <Content Include="Views\Certificates\Details.cshtml" />
     <Content Include="Views\Certificates\Edit.cshtml" />
     <Content Include="Views\Certificates\Index.cshtml" />
+    <Content Include="Views\InitializeDB\InitialiseDB.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
-    <Folder Include="Views\InitializeDB\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

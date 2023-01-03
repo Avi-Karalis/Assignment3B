@@ -28,3 +28,207 @@ textarea {
     background-color: #777;
     border-color: #fff
 }
+
+
+/*------------------------------------------------------------*/
+
+.width100 {
+    width: 100%;
+}
+
+.width100form {
+    width: 100%;
+    display: inline-block;
+    box-sizing: border-box;
+}
+
+.width70 {
+    width: 70%;
+}
+
+#bg {
+    background-color: #c4c4c4;
+}
+
+.inputtodiv { /* makes the inputs fill their container */
+    width: -webkit-fill-available;
+    width: -moz-available;
+    width: -moz-fill-available;
+    border: solid grey;
+    border-radius: 5px;
+    border-width: 0.1px;
+}
+    /* change input colors */
+    .inputtodiv:hover {
+        border: solid rgb(255, 78, 7);
+        border-radius: 5px;
+        border-width: 1px;
+    }
+
+    .inputtodiv:focus {
+        border: solid rgb(255, 78, 7);
+        border-radius: 5px;
+        border-width: 2px;
+        box-shadow: 0px 0px 15px rgba(255, 78, 7, 125);
+    }
+
+.table {
+    align-self: center;
+    width: 100%;
+    text-align: center;
+}
+
+text {
+    padding: 0px 0px;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+input {
+    padding: 0px 0px;
+}
+
+* {
+    font-family: Helvetica, sans-serif
+}
+
+input[type =radio] {
+    accent-color: rgb(255, 78, 7);
+}
+
+    input[type =radio]::cue {
+        accent-color: rgb(165, 53, 9);
+    }
+
+#required {
+    font-size: xx-small;
+    color: red;
+}
+
+.inputspos {
+    float: left;
+    width: 33%;
+    padding-right: 0.25%;
+}
+
+.inputspos50 {
+    float: left;
+    width: 49.5%;
+    padding-right: 0.25%;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 5px;
+    border: 1px rgba(0, 0, 0, 0) solid;
+    border: rgba(221, 221, 221, 0);
+    border-bottom: 1px solid rgb(179, 179, 179);
+}
+
+#button {
+    border-radius: 5px;
+    background-color: rgb(216, 128, 12);
+}
+
+input[type=button], input[type=submit], input[type=reset] {
+    background-color: rgb(216, 104, 12);
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    border: rgb(0, 0, 0, 0);
+    padding: 0.5% 0.5%;
+}
+
+    input[type=button]:hover, input[type=submit]:hover, input[type=reset]:hover {
+        background-color: rgb(241, 175, 88);
+    }
+
+button.details {
+    background-color: rgb(209, 136, 0);
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    border: rgb(0, 0, 0, 0);
+    padding: 3% 3%;
+}
+
+    button.details:hover {
+        background-color: rgb(117, 76, 0);
+    }
+
+button.certsButton {
+    background-color: rgb(0, 108, 209);
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    border: rgb(0, 0, 0, 0);
+    padding: 3% 3%;
+}
+
+    button.certsButton:hover {
+        background-color: rgb(65, 138, 247);
+    }
+
+button.delete {
+    background-color: rgb(209, 59, 0);
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    border: rgb(0, 0, 0, 0);
+    padding: 3% 3%;
+}
+
+    button.delete:hover {
+        background-color: rgb(143, 40, 0);
+    }
+
+button.newcand {
+    background-color: rgb(49, 53, 247);
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    border: rgb(0, 0, 0, 0);
+    padding: 1% 1%;
+}
+
+    button.newcand:hover {
+        background-color: rgb(85, 87, 212);
+    }
+
+
+/* modal from w3schools */
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.showHideCandidates {
+    display: block;
+}
+
+hr.changetoorange{
+    border-top-color:orangered;
+}
