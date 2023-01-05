@@ -2,6 +2,7 @@
 
 @{
     Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Candidate List";
 }
 
 <!DOCTYPE html>
@@ -9,135 +10,146 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>Index</title>
+    
 </head>
 <body>
-    <p>
-        @Html.ActionLink("Create New", "Create")
-    </p>
-    <table class="table">
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.FirstName)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.MiddleName)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.LastName)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Gender)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.NativeLanguage)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.CountryOfResidence)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Birthdate)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Email)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.LandLineNumber)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.MobileNumber)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Address1)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Address2)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.PostalCode)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Town)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Province)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.PhotoIdType)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.PhotoIdNumber)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.PhotoIdDate)
-            </th>
-            <th></th>
-        </tr>
-    
-    @foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.FirstName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.MiddleName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.LastName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Gender)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.NativeLanguage)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.CountryOfResidence)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Birthdate)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Email)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.LandLineNumber)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.MobileNumber)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Address1)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Address2)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.PostalCode)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Town)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Province)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.PhotoIdType)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.PhotoIdNumber)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.PhotoIdDate)
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { id=item.CandidateNumber }) |
-                @Html.ActionLink("Details", "Details", new { id=item.CandidateNumber }) |
-                @Html.ActionLink("Delete", "Delete", new { id=item.CandidateNumber })
-            </td>
-        </tr>
-    }
-    
-    </table>
+    <div style="margin-left:-367px">
+
+
+        <button type="button" class="certsButton">
+            @Html.ActionLink("Create New Candidate", "Create")
+        </button>
+
+        <table class="table">
+            <tr>
+                <th class="text-nowrap text-center">
+                    @Html.DisplayNameFor(model => model.FirstName)
+                </th>
+                <th class="text-nowrap text-center">
+                    @Html.DisplayNameFor(model => model.MiddleName)
+                </th>
+                <th class="text-nowrap text-center">
+                    @Html.DisplayNameFor(model => model.LastName)
+                </th>
+                <th class="text-nowrap text-center">
+                    @Html.DisplayNameFor(model => model.Gender)
+                </th>
+                <th class="text-nowrap text-center">
+                    @Html.DisplayNameFor(model => model.NativeLanguage)
+                </th>
+                <th class="text-nowrap text-center">
+                    @Html.DisplayNameFor(model => model.CountryOfResidence)
+                </th>
+                <th class="text-nowrap text-center">
+                    @Html.DisplayNameFor(model => model.Birthdate)
+                </th>
+                <th class="text-nowrap text-center">
+                    @Html.DisplayNameFor(model => model.Email)
+                </th>
+                <th class="text-nowrap text-center">
+                    @Html.DisplayNameFor(model => model.LandLineNumber)
+                </th>
+                <th class="text-nowrap text-center">
+                    @Html.DisplayNameFor(model => model.MobileNumber)
+                </th>
+                <th class="text-nowrap text-center">
+                    @Html.DisplayNameFor(model => model.Address1)
+                </th>
+                <th class="text-nowrap text-center">
+                    @Html.DisplayNameFor(model => model.Address2)
+                </th>
+                <th class="text-nowrap text-center">
+                    @Html.DisplayNameFor(model => model.PostalCode)
+                </th>
+                <th class="text-nowrap text-center">
+                    @Html.DisplayNameFor(model => model.Town)
+                </th>
+                <th class="text-nowrap text-center">
+                    @Html.DisplayNameFor(model => model.Province)
+                </th>
+                <th class="text-nowrap text-center">
+                    @Html.DisplayNameFor(model => model.PhotoIdType)
+                </th>
+                <th class="text-nowrap text-center">
+                    @Html.DisplayNameFor(model => model.PhotoIdNumber)
+                </th>
+                <th class="text-nowrap text-center">
+                    @Html.DisplayNameFor(model => model.PhotoIdDate)
+                </th>
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model) {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.FirstName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.MiddleName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.LastName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Gender)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.NativeLanguage)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CountryOfResidence)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Birthdate)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Email)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.LandLineNumber)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.MobileNumber)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Address1)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Address2)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.PostalCode)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Town)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Province)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.PhotoIdType)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.PhotoIdNumber)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.PhotoIdDate)
+                    </td>
+                    <td>
+                        <button class="btn btn-primary" id="skata">
+                            @Html.ActionLink("Edit", "Edit", new { id = item.CandidateNumber })
+                        </button>
+                        <button class="btn btn-success">
+                            @Html.ActionLink("Details", "Details", new { id = item.CandidateNumber })
+                        </button>
+                        <button class="btn btn-danger">
+                            @Html.ActionLink("Delete", "Delete", new { id = item.CandidateNumber })
+                        </button>
+                    </td>
+                </tr>
+            }
+
+        </table>
+    </div>
 </body>
 </html>

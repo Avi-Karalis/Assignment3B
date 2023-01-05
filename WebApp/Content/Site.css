@@ -155,7 +155,7 @@ button.details {
     color: white;
     cursor: pointer;
     border: rgb(0, 0, 0, 0);
-    padding: 3% 3%;
+    padding: 1% 1%;
 }
 
     button.details:hover {
@@ -165,10 +165,10 @@ button.details {
 button.certsButton {
     background-color: rgb(0, 108, 209);
     border-radius: 5px;
-    color: white;
+    color: white !important;
     cursor: pointer;
     border: rgb(0, 0, 0, 0);
-    padding: 3% 3%;
+    padding: 5px 5px;
 }
 
     button.certsButton:hover {
@@ -181,7 +181,7 @@ button.delete {
     color: white;
     cursor: pointer;
     border: rgb(0, 0, 0, 0);
-    padding: 3% 3%;
+    padding: 1% 1%
 }
 
     button.delete:hover {
@@ -201,34 +201,17 @@ button.newcand {
         background-color: rgb(85, 87, 212);
     }
 
-
-/* modal from w3schools */
-
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    .btn btn-primary{
+        color:white;
+        
+    }
+.whttxt{
+    color:white !important;
 }
-
-.close {
-    color: #aaaaaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
-
-.showHideCandidates {
-    display: block;
+button > a{
+    color:aliceblue !important;
 }
 
 hr.changetoorange{
-    border-top-color:orangered;
+    border-top: 1px solid orangered;
 }

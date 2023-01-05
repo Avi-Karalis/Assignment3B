@@ -267,6 +267,23 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="MainClass.cs" />
+    <Compile Include="Migrations\202301042228274_InitialMigrations2.cs" />
+    <Compile Include="Migrations\202301042228274_InitialMigrations2.designer.cs">
+      <DependentUpon>202301042228274_InitialMigrations2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202301042230430_InitialMigrations3.cs" />
+    <Compile Include="Migrations\202301042230430_InitialMigrations3.designer.cs">
+      <DependentUpon>202301042230430_InitialMigrations3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202301042234373_InitialMigrations4.cs" />
+    <Compile Include="Migrations\202301042234373_InitialMigrations4.designer.cs">
+      <DependentUpon>202301042234373_InitialMigrations4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202301042238031_InitialMigrations5.cs" />
+    <Compile Include="Migrations\202301042238031_InitialMigrations5.designer.cs">
+      <DependentUpon>202301042238031_InitialMigrations5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -342,6 +359,20 @@
       <Project>{68959aed-de28-4499-9231-e51e837e31fb}</Project>
       <Name>Menu</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202301042228274_InitialMigrations2.resx">
+      <DependentUpon>202301042228274_InitialMigrations2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202301042230430_InitialMigrations3.resx">
+      <DependentUpon>202301042230430_InitialMigrations3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202301042234373_InitialMigrations4.resx">
+      <DependentUpon>202301042234373_InitialMigrations4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202301042238031_InitialMigrations5.resx">
+      <DependentUpon>202301042238031_InitialMigrations5.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

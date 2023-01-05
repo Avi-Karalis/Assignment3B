@@ -8,15 +8,17 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>This is wher you start your journey</title>
+    
 
 </head>
 <body>
-    <h4> You need to Initialize the local DB using the button below to generate dummy candidates and certificates.</h4>
+    
+    <h4>You need to Initialize the local DB using the button below to generate dummy candidates and certificates.</h4>
     <hr />
     <div class="text-center">
-        <button class="delete" onclick=location.href='@Url.Action("InitializeDBFromProgram","InitializeDB")' style="border-radius: 8px";>Initialize Database</button>
+        <button onclick=location.href='@Url.Action("InitializeDBFromProgram","InitializeDB")' style="border-radius: 8px; background-color:orangered; color:aliceblue;";>Initialize Database</button>
     </div>
     <hr />
+    <p>Don't worry the code has been ammended so that if you click it more than once it'll be OK</p>
 </body>
 </html>

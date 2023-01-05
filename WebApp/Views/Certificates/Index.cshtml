@@ -1,7 +1,7 @@
 ﻿@model IEnumerable<WebApp.Data.Certificate>
 
 @{
-    Layout = null;
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <!DOCTYPE html>
@@ -17,31 +17,31 @@
     </p>
     <table class="table">
         <tr>
-            <th>
+            <th class="text-nowrap">
                 @Html.DisplayNameFor(model => model.Candidate.FirstName)
             </th>
-            <th>
+            <th class="text-nowrap">
                 @Html.DisplayNameFor(model => model.CertificateTitle.Title)
             </th>
-            <th>
+            <th class="text-nowrap">
                 @Html.DisplayNameFor(model => model.AssessmentTestCode)
             </th>
-            <th>
+            <th class="text-nowrap">
                 @Html.DisplayNameFor(model => model.ExaminationDate)
             </th>
-            <th>
+            <th class="text-nowrap">
                 @Html.DisplayNameFor(model => model.ScoreReportDate)
             </th>
-            <th>
+            <th class="text-nowrap">
                 @Html.DisplayNameFor(model => model.CandidateScore)
             </th>
-            <th>
+            <th class="text-nowrap">
                 @Html.DisplayNameFor(model => model.MaximumScore)
             </th>
-            <th>
+            <th class="text-nowrap">
                 @Html.DisplayNameFor(model => model.AssessmentResultLabel)
             </th>
-            <th>
+            <th class="text-nowrap">
                 @Html.DisplayNameFor(model => model.PercentageScore)
             </th>
             <th></th>

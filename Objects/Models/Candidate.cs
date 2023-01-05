@@ -11,12 +11,16 @@ using System.Reflection;
 using System.Xml.Linq;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel;
 
 namespace Objects.Models {
     [Table("Candidates")]
     public class Candidate {
+        [DisplayName("First Name")]
         public string FirstName { get; set; }
+        [DisplayName("Middle Name")]
         public string MiddleName { get; set; }
+        [DisplayName("Last Name")]
         public string LastName { get; set; }
         [Key]
         public int CandidateNumber  { get; set; }
