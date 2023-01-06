@@ -1,54 +1,65 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-    
+
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - Averkios Karalis is da best YAY</title>
     <link rel="icon" type="image/svg" href="~/Photos/favicon-16x16.png" />
     <link rel="stylesheet" href="~/Content/Site.css" />
-
+    @Scripts.Render("~/bundles/bootstrap.min.js")
+    @Scripts.Render("~/bundles/bootstrap.bundle.min.js")
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" title="more options">
-                    <span class="icon-bar">Test 1</span>
-                    <span class="icon-bar">Test 2</span>
-                    <span class="icon-bar">Test 3</span>
-                </button>
-                @Html.ActionLink("Averkios Karalis Assignment 3B", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                    <li>@Html.ActionLink("Candidate List", "Index", "Candidates")</li>
+    <div class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <div class="container mt-3">
+            <div class="container-fluid">
+
+                @Html.ActionLink("Averkios Karalis Assignment 3B", "Rick", "Home",new { area = "" }, new { @class = "navbar-brand" })
+                <ul class="nav nav-pills">
+                    <li class="nav nav-item">
+                        <span class="nav-link active" href="#">@Html.ActionLink("Home", "Index", "Home", new { area = "" }, new { id = "ot" })</span>
+                    </li>
+                    <li class="nav nav-item">
+                        <span class="nav-link active" href="#">@Html.ActionLink("About", "About", "Home", new { area = "" }, new { id = "ot" })</span>
+                    </li>
+                    <li class="nav nav-item">
+                        <span class="nav-link active" href="#">@Html.ActionLink("Contact", "Contact", "Home", new { area = "" }, new { id = "ot" })</span>
+                    </li>
+                    <li class="nav nav-item">
+                        <span class="nav-link active" href="#">@Html.ActionLink("Candidate List", "Index", "Candidates", new { area = "" }, new { id = "ot" })</span>
+                    </li>
                 </ul>
+
             </div>
         </div>
     </div>
 
-    <div class="container body-content" style="margin-top:55px">
-        @RenderBody()
-        <hr class="changetoorange" />
-        <span style="font-weight:bold">this is a footer</span>
-        <footer>
-            <p>&copy; @DateTime.Now - The most amazingest web applicating in the whole world wide web</p>
-            <p class="text-muted">
-                Yes the Copyright is being updated every second.
-            </p>
-        </footer>
-    </div>
 
+    <main class="container mt-4" >
+        @RenderBody()
+    </main>
+        <footer class="container py-3 mt-4 align-bottom">
+
+
+            <hr class="changetoorange" />
+            <span style="font-weight:bold">this is a footer</span>
+            <div>
+                <p>&copy; @DateTime.Now - The most amazingest web application in the whole world wide web</p>
+                <p class="text-muted">
+                    Do not question my aesthetic choices. I want to make this kitsch.
+                    I also have mercy on your eyes, by using Dark theme.
+                    Yes the Copyright is being updated every second.
+                </p>
+            </div>
+        </footer>
+   
 
     @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
+
     @RenderSection("scripts", required: false)
 </body>
 </html>

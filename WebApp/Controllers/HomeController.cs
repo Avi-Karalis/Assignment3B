@@ -21,5 +21,9 @@ namespace WebApp.Controllers {
 
             return View();
         }
+
+        public ActionResult Rick() {
+            return Redirect("https://www.youtube.com/watch?v=dQw4w9WgXcQ");
+        }
     }
 }

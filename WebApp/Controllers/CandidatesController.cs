@@ -52,6 +52,7 @@ namespace WebApp
             {
                 db.Candidates.Add(candidate);
                 db.SaveChanges();
+                TempData["messageSuccess"] = $"Candidate with ID {candidate.CandidateNumber} was Summoned successfuly";
                 return RedirectToAction("Index");
             }
 
@@ -63,12 +64,15 @@ namespace WebApp
         {
             if (id == null)
             {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+                
+                TempData["messageError"] = $"Error: Candidate with id {id} was not found. Using low tier tricks to break my code such as using 'null' values.";
+                return RedirectToAction("Index");
             }
             Candidate candidate = db.Candidates.Find(id);
             if (candidate == null)
             {
-                return HttpNotFound();
+                TempData["messageError"] = $"Error: Candidate with id {id} was not found. Dr. Pasparakis do not underestimate my low tier Brain.";
+                return RedirectToAction("Index");
             }
             return View(candidate);
         }
@@ -84,6 +88,7 @@ namespace WebApp
             {
                 db.Entry(candidate).State = System.Data.Entity.EntityState.Modified;
                 db.SaveChanges();
+                TempData["messageSuccess"] = $"Candidate with ID {candidate.CandidateNumber} was Updated successfuly";
                 return RedirectToAction("Index");
             }
             return View(candidate);
@@ -94,12 +99,14 @@ namespace WebApp
         {
             if (id == null)
             {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+                TempData["messageError"] = $"Error: Candidate with id {id} was not found. Using low tier tricks to break my code such as using 'null' values.";
+                return RedirectToAction("Index");
             }
             Candidate candidate = db.Candidates.Find(id);
             if (candidate == null)
             {
-                return HttpNotFound();
+                TempData["messageError"] = $"Error: Candidate with id {id} was not found. Dr. Pasparakis do not underestimate my low tier Brain.";
+                return RedirectToAction("Index");
             }
             return View(candidate);
         }
@@ -109,9 +116,11 @@ namespace WebApp
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
+            
             Candidate candidate = db.Candidates.Find(id);
             db.Candidates.Remove(candidate);
             db.SaveChanges();
+            TempData["messageError"] = $"Candidate with id {id} was succesfully Assassinated";
             return RedirectToAction("Index");
         }
 
