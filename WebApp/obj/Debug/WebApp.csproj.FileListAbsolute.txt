@@ -183,8 +183,5 @@ C:\Users\Avi\source\repos\Assignment3B\WebApp\obj\Debug\WebApp.csproj.CoreCompil
 C:\Users\Avi\source\repos\Assignment3B\WebApp\obj\Debug\WebApp.csproj.CopyComplete
 C:\Users\Avi\source\repos\Assignment3B\WebApp\obj\Debug\WebApp.dll
 C:\Users\Avi\source\repos\Assignment3B\WebApp\obj\Debug\WebApp.pdb
-C:\Users\Avi\source\repos\Assignment3B\WebApp\obj\Debug\WebApp.Migrations.InitialMigrations2.resources
+C:\Users\Avi\source\repos\Assignment3B\WebApp\obj\Debug\WebApp.Migrations.initialcreate.resources
 C:\Users\Avi\source\repos\Assignment3B\WebApp\obj\Debug\WebApp.csproj.GenerateResource.cache
-C:\Users\Avi\source\repos\Assignment3B\WebApp\obj\Debug\WebApp.Migrations.InitialMigrations3.resources
-C:\Users\Avi\source\repos\Assignment3B\WebApp\obj\Debug\WebApp.Migrations.InitialMigrations4.resources
-C:\Users\Avi\source\repos\Assignment3B\WebApp\obj\Debug\WebApp.Migrations.InitialMigrations5.resources

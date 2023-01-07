@@ -2,7 +2,7 @@
 
 @{
     Layout = "~/Views/Shared/_Layout.cshtml";
-    ViewBag.Title = "Candidate List";
+    ViewBag.Title = "Details of a Candidate";
 }
 
 <!DOCTYPE html>
@@ -13,159 +13,111 @@
     <title>Details</title>
 </head>
 <body>
-    <div>
-        <h4>Candidate</h4>
-        <hr />
-        <dl class="dl-horizontal">
-            <dt>
-                @Html.DisplayNameFor(model => model.FirstName)
-            </dt>
-    
-            <dd>
-                @Html.DisplayFor(model => model.FirstName)
-            </dd>
-    
-            <dt>
-                @Html.DisplayNameFor(model => model.MiddleName)
-            </dt>
-    
-            <dd>
-                @Html.DisplayFor(model => model.MiddleName)
-            </dd>
-    
-            <dt>
-                @Html.DisplayNameFor(model => model.LastName)
-            </dt>
-    
-            <dd>
-                @Html.DisplayFor(model => model.LastName)
-            </dd>
-    
-            <dt>
-                @Html.DisplayNameFor(model => model.Gender)
-            </dt>
-    
-            <dd>
-                @Html.DisplayFor(model => model.Gender)
-            </dd>
-    
-            <dt>
-                @Html.DisplayNameFor(model => model.NativeLanguage)
-            </dt>
-    
-            <dd>
-                @Html.DisplayFor(model => model.NativeLanguage)
-            </dd>
-    
-            <dt>
-                @Html.DisplayNameFor(model => model.CountryOfResidence)
-            </dt>
-    
-            <dd>
-                @Html.DisplayFor(model => model.CountryOfResidence)
-            </dd>
-    
-            <dt>
-                @Html.DisplayNameFor(model => model.Birthdate)
-            </dt>
-    
-            <dd>
-                @Html.DisplayFor(model => model.Birthdate)
-            </dd>
-    
-            <dt>
-                @Html.DisplayNameFor(model => model.Email)
-            </dt>
-    
-            <dd>
-                @Html.DisplayFor(model => model.Email)
-            </dd>
-    
-            <dt>
-                @Html.DisplayNameFor(model => model.LandLineNumber)
-            </dt>
-    
-            <dd>
-                @Html.DisplayFor(model => model.LandLineNumber)
-            </dd>
-    
-            <dt>
-                @Html.DisplayNameFor(model => model.MobileNumber)
-            </dt>
-    
-            <dd>
-                @Html.DisplayFor(model => model.MobileNumber)
-            </dd>
-    
-            <dt>
-                @Html.DisplayNameFor(model => model.Address1)
-            </dt>
-    
-            <dd>
-                @Html.DisplayFor(model => model.Address1)
-            </dd>
-    
-            <dt>
-                @Html.DisplayNameFor(model => model.Address2)
-            </dt>
-    
-            <dd>
-                @Html.DisplayFor(model => model.Address2)
-            </dd>
-    
-            <dt>
-                @Html.DisplayNameFor(model => model.PostalCode)
-            </dt>
-    
-            <dd>
-                @Html.DisplayFor(model => model.PostalCode)
-            </dd>
-    
-            <dt>
-                @Html.DisplayNameFor(model => model.Town)
-            </dt>
-    
-            <dd>
-                @Html.DisplayFor(model => model.Town)
-            </dd>
-    
-            <dt>
-                @Html.DisplayNameFor(model => model.Province)
-            </dt>
-    
-            <dd>
-                @Html.DisplayFor(model => model.Province)
-            </dd>
-    
-            <dt>
-                @Html.DisplayNameFor(model => model.PhotoIdType)
-            </dt>
-    
-            <dd>
-                @Html.DisplayFor(model => model.PhotoIdType)
-            </dd>
-    
-            <dt>
-                @Html.DisplayNameFor(model => model.PhotoIdNumber)
-            </dt>
-    
-            <dd>
-                @Html.DisplayFor(model => model.PhotoIdNumber)
-            </dd>
-    
-            <dt>
-                @Html.DisplayNameFor(model => model.PhotoIdDate)
-            </dt>
-    
-            <dd>
-                @Html.DisplayFor(model => model.PhotoIdDate)
-            </dd>
-    
-        </dl>
+
+    <h3 style="text-align:center;">Candidate Details</h3>
+    <hr />
+    <h4 style="text-align:center;">You can't edit here</h4>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <table id="myTable" class="table table-bordered changecolortored">
+                    <thead>
+                        <tr>
+                            <th>@Html.DisplayNameFor(model => model.FirstName)</th>
+                            <th>@Html.DisplayNameFor(model => model.MiddleName)</th>
+                            <th>@Html.DisplayNameFor(model => model.LastName)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>@Html.DisplayFor(model => model.FirstName)</td>
+                            <td>@Html.DisplayFor(model => model.MiddleName)</td>
+                            <td>@Html.DisplayFor(model => model.LastName)</td>
+                        </tr>
+                    </tbody>
+
+                    <thead>
+                        <tr>
+                            <th>@Html.DisplayNameFor(model => model.Gender)</th>
+                            <th> @Html.DisplayNameFor(model => model.NativeLanguage)</th>
+                            <th>@Html.DisplayNameFor(model => model.CountryOfResidence)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>@Html.DisplayFor(model => model.Gender)</td>
+                            <td>@Html.DisplayFor(model => model.NativeLanguage)</td>
+                            <td>@Html.DisplayFor(model => model.CountryOfResidence)</td>
+                        </tr>
+                    </tbody>
+
+                    <thead>
+                        <tr>
+                            <th>@Html.DisplayNameFor(model => model.Birthdate)</th>
+                            <th>@Html.DisplayNameFor(model => model.Email)</th>
+                            <th>@Html.DisplayNameFor(model => model.LandLineNumber)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>@Html.DisplayFor(model => model.Birthdate)</td>
+                            <td>@Html.DisplayFor(model => model.Email)</td>
+                            <td>@Html.DisplayFor(model => model.LandLineNumber)</td>
+                        </tr>
+                    </tbody>
+
+                    <thead>
+                        <tr>
+                            <th>@Html.DisplayNameFor(model => model.MobileNumber)</th>
+                            <th>@Html.DisplayNameFor(model => model.Address1)</th>
+                            <th>@Html.DisplayNameFor(model => model.Address2)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>@Html.DisplayFor(model => model.MobileNumber)</td>
+                            <td>@Html.DisplayFor(model => model.Address1)</td>
+                            <td>@Html.DisplayFor(model => model.Address2)</td>
+                        </tr>
+                    </tbody>
+
+                    <thead>
+                        <tr>
+                            <th>@Html.DisplayNameFor(model => model.PostalCode)</th>
+                            <th>@Html.DisplayNameFor(model => model.Town)</th>
+                            <th>@Html.DisplayNameFor(model => model.Province)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>@Html.DisplayFor(model => model.PostalCode)</td>
+                            <td>@Html.DisplayFor(model => model.Town)</td>
+                            <td>@Html.DisplayFor(model => model.Province)</td>
+                        </tr>
+                    </tbody>
+
+                    <thead>
+                        <tr>
+                            <th>@Html.DisplayNameFor(model => model.PhotoIdType)</th>
+                            <th>@Html.DisplayNameFor(model => model.PhotoIdNumber)</th>
+                            <th>@Html.DisplayNameFor(model => model.PhotoIdDate)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>@Html.DisplayFor(model => model.PhotoIdType)</td>
+                            <td>@Html.DisplayFor(model => model.PhotoIdNumber)</td>
+                            <td>@Html.DisplayFor(model => model.PhotoIdDate)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
     </div>
     <p>
-        @Html.ActionLink("Edit", "Edit", new { id = Model.CandidateNumber }) |
-        @Html.ActionLink("Back to List", "Index")
+        <button type="button" class="btn btn-primary">@Html.ActionLink("Edit", "Edit", new { id = Model.CandidateNumber })</button>
+         |
+        <button type="button" class="btn btn-info">@Html.ActionLink("Back to List", "Index")</button>
     </p>
 </body>
 </html>

@@ -12,162 +12,166 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    
+
 </head>
 <body>
-            <div>
-                @if (TempData["messageError"] != null) {
+    <div>
+        @if (TempData["messageError"] != null) {
 
-                    <div class="alert alert-danger">@TempData["messageError"]</div>
+            <div class="alert alert-danger" role="alert" style="max-width: fit-content; display: inline-block;">@TempData["messageError"]</div>
 
-                } else {
-                    if (TempData["messageSuccess"] != null) {
-                        <div class="alert alert-success">@TempData["messageSuccess"]</div>
-                    }
-                }
-            </div>
-            <div class="linknounderline">
-                <button type="button" class="btn btn-outline-info" style="text-decoration:none;">
-                    @Html.ActionLink("Create New Candidate", "Create")
-                </button>
-            </div>
-            
+        } else {
+            if (TempData["messageSuccess"] != null) {
+                <div class="alert alert-success" role="alert" style="max-width: fit-content; display: inline-block;">@TempData["messageSuccess"]</div>
+            }
+        }
+    </div>
+    <div class="linknounderline">
+        <button type="button" class="btn btn-outline-info" style="text-decoration:none;">
+            @Html.ActionLink("Create New Candidate", "Create")
+        </button>
+    </div>
 
-            <table class="table" style="vertical-align:inherit; width:100%">
-                <tr>
-                    <th class="text-nowrap text-center">
-                        @Html.DisplayNameFor(model => model.FirstName)
-                    </th>
-                    <th class="text-nowrap text-center">
-                        @Html.DisplayNameFor(model => model.MiddleName)
-                    </th>
-                    <th class="text-nowrap text-center">
-                        @Html.DisplayNameFor(model => model.LastName)
-                    </th>
-                    <th class="text-nowrap text-center">
-                        @Html.DisplayNameFor(model => model.Gender)
-                    </th>
-                    <th class="text-nowrap text-center">
-                        @Html.DisplayNameFor(model => model.NativeLanguage)
-                    </th>
-                    <th class="text-nowrap text-center">
-                        @Html.DisplayNameFor(model => model.CountryOfResidence)
-                    </th>
-                    <th class="text-nowrap text-center">
-                        @Html.DisplayNameFor(model => model.Birthdate)
-                    </th>
-                    <th class="text-nowrap text-center">
-                        @Html.DisplayNameFor(model => model.Email)
-                    </th>
-                    <th class="text-nowrap text-center">
-                        @Html.DisplayNameFor(model => model.LandLineNumber)
-                    </th>
-                    <th class="text-nowrap text-center">
-                        @Html.DisplayNameFor(model => model.MobileNumber)
-                    </th>
-                    @*<th class="text-nowrap text-center">
-                        @Html.DisplayNameFor(model => model.Address1)
-                    </th>
-                    <th class="text-nowrap text-center">
-                        @Html.DisplayNameFor(model => model.Address2)
-                    </th>
-                    <th class="text-nowrap text-center">
-                        @Html.DisplayNameFor(model => model.PostalCode)
-                    </th>
-                    <th class="text-nowrap text-center">
-                        @Html.DisplayNameFor(model => model.Town)
-                    </th>
-                    <th class="text-nowrap text-center">
-                        @Html.DisplayNameFor(model => model.Province)
-                    </th>
-                    <th class="text-nowrap text-center">
-                        @Html.DisplayNameFor(model => model.PhotoIdType)
-                    </th>
-                    <th class="text-nowrap text-center">
-                        @Html.DisplayNameFor(model => model.PhotoIdNumber)
-                    </th>
-                    <th class="text-nowrap text-center">
-                        @Html.DisplayNameFor(model => model.PhotoIdDate)
-                    </th>*@
-                    <th>
-                        Actions
-                    </th>
-                </tr>
 
-                @foreach (var item in Model) {
-                    <tr>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.FirstName)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.MiddleName)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.LastName)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.Gender)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.NativeLanguage)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.CountryOfResidence)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.Birthdate)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.Email)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.LandLineNumber)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.MobileNumber)
-                        </td>
-                        @*<td>
-                            @Html.DisplayFor(modelItem => item.Address1)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.Address2)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.PostalCode)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.Town)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.Province)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.PhotoIdType)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.PhotoIdNumber)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.PhotoIdDate)
-                        </td>*@
-                        <td class="">
-                            <div class="btn-group d-flex linknounderline" role="group">
-                                <button type="submit" class="btn btn-primary w-100" id="skata">
-                                    @Html.ActionLink("Edit", "Edit", new { id = item.CandidateNumber })
-                                </button>
-                                <button class="btn btn-success w-100">
-                                    @Html.ActionLink("Details", "Details", new { id = item.CandidateNumber })
-                                </button>
-                                <button class="btn btn-danger w-100">
-                                    @Html.ActionLink("Delete", "Delete", new { id = item.CandidateNumber })
-                                </button>
-                            </div>
-                        </td>
-                    </tr>
-                }
+    <table class="table" style="vertical-align: inherit; width: 100%; overflow-x: scroll; vertical-align: middle; ">
+        <tr>
+            <th class="text-nowrap text-center">
+                @Html.DisplayNameFor(model => model.FirstName)
+            </th>
+            <th class="text-nowrap text-center">
+                @Html.DisplayNameFor(model => model.MiddleName)
+            </th>
+            <th class="text-nowrap text-center">
+                @Html.DisplayNameFor(model => model.LastName)
+            </th>
+            <th class="text-nowrap text-center">
+                @Html.DisplayNameFor(model => model.Gender)
+            </th>
+            <th class="text-nowrap text-center">
+                @Html.DisplayNameFor(model => model.NativeLanguage)
+            </th>
+            <th class="text-nowrap text-center">
+                @Html.DisplayNameFor(model => model.CountryOfResidence)
+            </th>
+            <th class="text-nowrap text-center">
+                @Html.DisplayNameFor(model => model.Birthdate)
+            </th>
+            <th class="text-nowrap text-center">
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
 
-            </table>
+            <th class="text-nowrap text-center">
+                @Html.DisplayNameFor(model => model.MobileNumber)
+            </th>
+            @*
+                    <th class="text-nowrap text-center">
+                    @Html.DisplayNameFor(model => model.LandLineNumber)
+                </th>
+                    <th class="text-nowrap text-center">
+                    @Html.DisplayNameFor(model => model.Address1)
+                </th>
+                <th class="text-nowrap text-center">
+                    @Html.DisplayNameFor(model => model.Address2)
+                </th>
+                <th class="text-nowrap text-center">
+                    @Html.DisplayNameFor(model => model.PostalCode)
+                </th>
+                <th class="text-nowrap text-center">
+                    @Html.DisplayNameFor(model => model.Town)
+                </th>
+                <th class="text-nowrap text-center">
+                    @Html.DisplayNameFor(model => model.Province)
+                </th>
+                <th class="text-nowrap text-center">
+                    @Html.DisplayNameFor(model => model.PhotoIdType)
+                </th>
+                <th class="text-nowrap text-center">
+                    @Html.DisplayNameFor(model => model.PhotoIdNumber)
+                </th>
+                <th class="text-nowrap text-center">
+                    @Html.DisplayNameFor(model => model.PhotoIdDate)
+                </th>*@
+            <th>
+                Actions
+            </th>
+        </tr>
 
-    
+        @foreach (var item in Model) {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FirstName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MiddleName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LastName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Gender)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NativeLanguage)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CountryOfResidence)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Birthdate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Email)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.MobileNumber)
+                </td>
+                @*
+            <td>
+            @Html.DisplayFor(modelItem => item.LandLineNumber)
+        </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Address1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Address2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PostalCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Town)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Province)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PhotoIdType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PhotoIdNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PhotoIdDate)
+            </td>*@
+                <td class="">
+                    <div class="d-flex  linknounderline" style="flex-direction:column;" role="group">
+                        <button type="submit" class="btn btn-primary w-100" id="skata">
+                            @Html.ActionLink("Edit", "Edit", new { id = item.CandidateNumber })
+                        </button>
+                        <button class="btn btn-success w-100">
+                            @Html.ActionLink("Details", "Details", new { id = item.CandidateNumber })
+                        </button>
+                        <button class="btn btn-danger w-100">
+                            @Html.ActionLink("Delete", "Delete", new { id = item.CandidateNumber })
+                        </button>
+                    </div>
+                </td>
+            </tr>
+        }
+
+    </table>
+
+
 </body>
 </html>

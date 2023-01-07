@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
+using System.Diagnostics;
 using System.Linq;
 using System.Net;
 using System.Web;
@@ -25,12 +26,14 @@ namespace WebApp
         {
             if (id == null)
             {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+                TempData["messageError"] = $"Error: Candidate with id {id} was not found. Using low tier tricks to break my code such as using 'null' values.";
+                return RedirectToAction("Index");
             }
             Candidate candidate = db.Candidates.Find(id);
             if (candidate == null)
             {
-                return HttpNotFound();
+                TempData["messageError"] = $"Error: Candidate with id {id} was not found. Dr. Pasparakis do not underestimate my low tier Brain.";
+                return RedirectToAction("Index");
             }
             return View(candidate);
         }
@@ -68,12 +71,16 @@ namespace WebApp
                 TempData["messageError"] = $"Error: Candidate with id {id} was not found. Using low tier tricks to break my code such as using 'null' values.";
                 return RedirectToAction("Index");
             }
-            Candidate candidate = db.Candidates.Find(id);
+            var candidate = db.Candidates.Find(id);
             if (candidate == null)
             {
                 TempData["messageError"] = $"Error: Candidate with id {id} was not found. Dr. Pasparakis do not underestimate my low tier Brain.";
                 return RedirectToAction("Index");
             }
+            var viewModel = new Candidate();
+            viewModel.PhotoIdDate = candidate.PhotoIdDate;
+            viewModel.Birthdate = candidate.Birthdate;
+
             return View(candidate);
         }
 
