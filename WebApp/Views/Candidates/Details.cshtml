@@ -39,7 +39,7 @@
                     <thead>
                         <tr>
                             <th>@Html.DisplayNameFor(model => model.Gender)</th>
-                            <th> @Html.DisplayNameFor(model => model.NativeLanguage)</th>
+                            <th>@Html.DisplayNameFor(model => model.NativeLanguage)</th>
                             <th>@Html.DisplayNameFor(model => model.CountryOfResidence)</th>
                         </tr>
                     </thead>
@@ -116,7 +116,10 @@
     </div>
     <p>
         <button type="button" class="btn btn-primary">@Html.ActionLink("Edit", "Edit", new { id = Model.CandidateNumber })</button>
-         |
+        |
+        <button type="button" class="btn btn-outline-primary">@Html.ActionLink("Results", "Details", "Certificates", new { id = Model.CandidateNumber }, new { id = "" })</button>
+      
+        |
         <button type="button" class="btn btn-info">@Html.ActionLink("Back to List", "Index")</button>
     </p>
 </body>

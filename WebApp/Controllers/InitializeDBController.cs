@@ -14,7 +14,7 @@ namespace WebApp.Controllers
     {
         public ActionResult InitializeDBFromProgram() {
             Menu.Program.InitialiseDatabase();
-            return RedirectToAction("Index", "Candidates");
+            return RedirectToAction("Index", "Home");
         }
 
         public ActionResult InitialiseDB() {

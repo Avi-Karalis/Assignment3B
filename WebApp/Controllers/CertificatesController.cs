@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Mvc.Infrastructure;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
@@ -15,23 +16,22 @@ namespace WebApp
         private WebDbContext db = new WebDbContext();
 
         // GET: Certificates
-        public ActionResult Index()
-        {
-            var certificates = db.Certificates.Include(c => c.Candidate).Include(c => c.CertificateTitle);
-            return View(certificates.ToList());
-        }
+    
 
         // GET: Certificates/Details/5
         public ActionResult Details(int? id)
         {
+
             if (id == null)
             {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+                TempData["messageError"] = $"Error: Candidate with id {id} was not found. Using low tier tricks to break my code such as using 'null' values.";
+                return RedirectToAction("Index", "Home");
             }
             Certificate certificate = db.Certificates.Find(id);
             if (certificate == null)
             {
-                return HttpNotFound();
+                TempData["messageError"] = $"Error: Candidate with id {id} was not found.";
+                return RedirectToAction("Index", "Home");
             }
             return View(certificate);
         }

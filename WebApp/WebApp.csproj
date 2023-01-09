@@ -262,6 +262,7 @@
     <Compile Include="Data\CertificateTitle.cs" />
     <Compile Include="Data\CertificateTopic.cs" />
     <Compile Include="Data\C__MigrationHistory.cs" />
+    <Compile Include="Data\LoginModel.cs" />
     <Compile Include="Data\WebDbContext.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -352,11 +353,7 @@
     <Content Include="Views\Candidates\Details.cshtml" />
     <Content Include="Views\Candidates\Edit.cshtml" />
     <Content Include="Views\Candidates\Index.cshtml" />
-    <Content Include="Views\Certificates\Create.cshtml" />
-    <Content Include="Views\Certificates\Delete.cshtml" />
     <Content Include="Views\Certificates\Details.cshtml" />
-    <Content Include="Views\Certificates\Edit.cshtml" />
-    <Content Include="Views\Certificates\Index.cshtml" />
     <Content Include="Views\InitializeDB\InitialiseDB.cshtml" />
   </ItemGroup>
   <ItemGroup>

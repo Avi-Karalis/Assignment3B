@@ -16,6 +16,13 @@ namespace WebApp {
                 defaults: new { controller = "InitializeDB", action = "InitialiseDB", id = UrlParameter.Optional }
             );
 
+            //routes.MapRoute(
+
+            //    name: "Login",
+            //    url: "Home/Login",
+            //    defaults: new { controller = "Home", action = "Login"}
+            //    );
+
 
         }
     }

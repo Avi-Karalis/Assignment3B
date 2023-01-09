@@ -1,8 +1,10 @@
 ﻿@model WebApp.Data.Certificate
 
 @{
-    Layout = null;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Results of a Candidate";
 }
+
 
 <!DOCTYPE html>
 
@@ -19,80 +21,79 @@
             <dt>
                 @Html.DisplayNameFor(model => model.Candidate.FirstName)
             </dt>
-    
+
             <dd>
                 @Html.DisplayFor(model => model.Candidate.FirstName)
             </dd>
-    
+
             <dt>
                 @Html.DisplayNameFor(model => model.CertificateTitle.Title)
             </dt>
-    
+
             <dd>
                 @Html.DisplayFor(model => model.CertificateTitle.Title)
             </dd>
-    
+
             <dt>
                 @Html.DisplayNameFor(model => model.AssessmentTestCode)
             </dt>
-    
+
             <dd>
                 @Html.DisplayFor(model => model.AssessmentTestCode)
             </dd>
-    
+
             <dt>
                 @Html.DisplayNameFor(model => model.ExaminationDate)
             </dt>
-    
+
             <dd>
                 @Html.DisplayFor(model => model.ExaminationDate)
             </dd>
-    
+
             <dt>
                 @Html.DisplayNameFor(model => model.ScoreReportDate)
             </dt>
-    
+
             <dd>
                 @Html.DisplayFor(model => model.ScoreReportDate)
             </dd>
-    
+
             <dt>
                 @Html.DisplayNameFor(model => model.CandidateScore)
             </dt>
-    
+
             <dd>
                 @Html.DisplayFor(model => model.CandidateScore)
             </dd>
-    
+
             <dt>
                 @Html.DisplayNameFor(model => model.MaximumScore)
             </dt>
-    
+
             <dd>
                 @Html.DisplayFor(model => model.MaximumScore)
             </dd>
-    
+
             <dt>
                 @Html.DisplayNameFor(model => model.AssessmentResultLabel)
             </dt>
-    
+
             <dd>
                 @Html.DisplayFor(model => model.AssessmentResultLabel)
             </dd>
-    
+
             <dt>
                 @Html.DisplayNameFor(model => model.PercentageScore)
             </dt>
-    
+
             <dd>
                 @Html.DisplayFor(model => model.PercentageScore)
             </dd>
-    
+
         </dl>
     </div>
     <p>
-        @Html.ActionLink("Edit", "Edit", new { id = Model.CertificateId }) |
-        @Html.ActionLink("Back to List", "Index")
+        <button type="button" class="btn btn-info">@Html.ActionLink("Back to Log-In", "Index", "Home")</button>
     </p>
 </body>
 </html>
