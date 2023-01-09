@@ -12,7 +12,7 @@ namespace WebApp.Controllers {
         private WebDbContext db = new WebDbContext();
         public ActionResult Index() {
 
-            return View(new LoginModel());
+            return View();
         }
 
         public ActionResult About() {

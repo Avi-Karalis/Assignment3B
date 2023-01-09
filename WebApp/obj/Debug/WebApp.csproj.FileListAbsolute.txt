@@ -185,3 +185,6 @@ C:\Users\Avi\source\repos\Assignment3B\WebApp\obj\Debug\WebApp.dll
 C:\Users\Avi\source\repos\Assignment3B\WebApp\obj\Debug\WebApp.pdb
 C:\Users\Avi\source\repos\Assignment3B\WebApp\obj\Debug\WebApp.Migrations.initialcreate.resources
 C:\Users\Avi\source\repos\Assignment3B\WebApp\obj\Debug\WebApp.csproj.GenerateResource.cache
+C:\Users\Avi\source\repos\Assignment3B\WebApp\bin\BouncyCastle.Crypto.dll
+C:\Users\Avi\source\repos\Assignment3B\WebApp\bin\itextsharp.dll
+C:\Users\Avi\source\repos\Assignment3B\WebApp\bin\itextsharp.xml
